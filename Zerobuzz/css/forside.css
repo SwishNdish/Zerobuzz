@@ -1,19 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap");
 
-
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Monsieur+La+Doulaise&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Monsieur+La+Doulaise&display=swap");
 
 body {
   font-family: Barlow, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #FAF6DB;
+  background-color: #faf6db;
 }
 
 /* Navigation menu */
 nav {
-  background-color: #A9C280;
+  background-color: #a9c280;
   color: #fff;
   display: flex;
   justify-content: center; /* Center nav-content horizontalt */
@@ -29,7 +28,6 @@ nav {
   align-items: center; /* Centerered elementer */
   width: 100%;
 }
-
 
 /* Navigation menu placement */
 .menu1 {
@@ -51,27 +49,29 @@ nav {
 
 /* Hover effects for menu items */
 .menu1 a:hover {
-  background-color: #EEE8C0; /* backgrundsfarve når der hovers henover et menufelt */
-  color: #A9C280; /* tekst farve on hover */
+  background-color: #eee8c0; /* backgrundsfarve når der hovers henover et menufelt */
+  color: #a9c280; /* tekst farve on hover */
 }
 
 /* Styling af ØLdåse placeret inde i navigations baren */
 .billede {
-  width: 50%; /* billedet optager nødvendige plads */
+  width: 100%; /* billedet optager nødvendige plads */
   text-align: center; /* Centerere billedet horizontalt */
-  margin-right: 220px;
-  margin-top: 50px;
+  margin-right: 220px ;
+  background-color: #a9c280;
+  padding-bottom: 40px;
 }
 
 .billede img {
-  max-width: 60%; /* sikre at billedet er responsivt */
+  max-width: 25%; /* sikre at billedet er responsivt */
   height: auto; /*  aspect ratio */
 }
 /* Style for the knap image */
 .knap {
-  position: absolute; /* Positioner så den kan komme ned i venstre hjørne */
-  bottom: 100px; /* Position det i bunden */
-  left: 100px; /* Position til venstre */
+  position: absolute;
+  margin-left: 100px; /* Position det i bunden */
+  text-align: left;
+  margin-top: -200px;
 }
 
 .knap img {
@@ -79,7 +79,6 @@ nav {
   height: auto; /*  aspect ratio */
   width: 200px; /* juster bredden */
 }
-
 
 /* logo størrelse og placering foran baggrund */
 .logo {
@@ -137,10 +136,8 @@ nav {
   display: block;
 }
 
-
 #play-button:hover {
   background-color: #3e8e41;
- 
 }
 /* artikel smooth transition og farver samt padding og margin for white space */
 .article {
@@ -148,14 +145,14 @@ nav {
   transition: opacity 1s ease, transform 1s ease;
   color: #60421a;
   padding: 20px 320px;
-  margin-top: 20px;
+  margin-top: 00px;
   text-align: center;
 }
 /* white space for paragraferne */
 .article h2,
 .article,
 .article p {
-  margin: 0 0 20px;
+  margin: 0 0 0px;
 }
 /* styling af brødtekst */
 p {
@@ -191,14 +188,8 @@ hr {
   width: 60%;
   margin: 20px auto;
 }
-/* læs mere cirkle */
-.article .read-more {
-  color: #c36b54;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 15px;
-}
+
+
 
 /* css for at artiklen bliver synlig */
 .article-visible {
@@ -228,7 +219,6 @@ hr {
   height: auto; /* Maintain the aspect ratio */
 }
 
-
 /* footer design */
 * {
   margin: 0;
@@ -237,12 +227,12 @@ hr {
 }
 
 body {
-  font-family: 'barlow condensed', sans-serif;
+  font-family: "barlow condensed", sans-serif;
 }
 
 .footer {
-  background-color: #6D8853;
-  color: #745A37; /* Set text color to black */
+  background-color: #6d8853;
+  color: #745a37; /* Set text color to black */
   padding: 40px 0;
 }
 
@@ -252,9 +242,11 @@ body {
   margin-bottom: 10px;
 }
 
-.social-media-text, .footer-section h3, .footer-section p {
+.social-media-text,
+.footer-section h3,
+.footer-section p {
   color: #C47819(6, 147, 227); /* Same color as titles */
-  font-family: 'barlow condensed'; /* Change font family */
+  font-family: "barlow condensed"; /* Change font family */
   font-weight: bold; /* Set bold font weight */
 }
 
@@ -267,8 +259,8 @@ body {
   margin-right: 25px;
 }
 
-.social-media img{
-  width: 50px; /* Adjust the size of the social media icons */
+.social-media img {
+  width: 100%; /* Adjust the size of the social media icons */
 }
 
 .footer-content {
@@ -276,13 +268,12 @@ body {
   justify-content: space-between;
   align-items: f; /* Vertically align items to the top */
   margin-left: 5px; /* Add margin to move content to the right */
-  
 }
 
 .footer-section {
   width: calc(30% - 10px); /* Adjust width to fit closer together with margin */
   margin-right: 10px; /* Add margin between sections */
-  font-family: barlow;
+  font-family: 'barlow condensed';
   color: #130b01;
 }
 
@@ -300,16 +291,25 @@ body {
   color: #3d2604; /* Set text color to black */
 }
 
-
-
-
-@media (min-width: 1260px) {
+@media (max-width: 960px) {
   footer {
     text-align: center;
-    padding: 10px 0;
-    position: relative;
+    padding: 5px 0;
     width: 100%;
     margin-top: 11%;
+  }
+  .social-media {
+    display: flex;
+    flex-direction: column; /* Add this line */
+    align-items: center;
+  }
+
+  .social-media a {
+    margin-right: 0; /* Remove this line */
+  }
+
+  .social-media img {
+    width: 80%; /* Adjust the size of the social media icons */
   }
 }
 
@@ -351,27 +351,9 @@ body {
   .logo1 {
     height: 10px;
     width: auto;
-    display: none;
   }
 
-  header .hero-image {
-    width: 100%;
-    height: 100vh;
-    background: url("sti-til-dit-hero-billede.jpg") no-repeat center center;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 0;
-  }
-
-  header .hero-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+  
 
   .logo {
     position: absolute;
@@ -385,7 +367,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #a9c280;
     z-index: 2;
     display: block;
   }
@@ -416,7 +398,7 @@ body {
     top: 45px;
     left: 0;
     width: fixed; /* eller fast bredde */
-    background-color: #333;
+    background-color: #a9c280;
     text-align: left;
     padding: 15px;
   }
@@ -429,45 +411,76 @@ body {
   }
 
   .menu a:hover {
-    background-color: #575757;
+    background-color: #0a3c0f;
   }
 
   .article {
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
-    background-color: #f2f2f2;
-    color: #333;
+    color: #60421a;
     padding: 20px;
-    margin-top: 20px;
-    background-color: #e6dfde;
+    margin-top: 0px;
   }
 
   .article h2,
   .article,
   .article p {
-    margin: 0 0 20px;
+    margin: 0px;
+  }
+  .billede {
+    width: 100%; /* billedet optager nødvendige plads */
+    text-align: center; /* Centererer billedet horizontalt */
+   padding-top: 20px ;
+    margin-top: 50px;
+    margin-left: auto; /* Add this line to center the image */
+    margin-right: auto; /* Add this line to center the image */
   }
 
-  p {
-    font-family: "Arapey", serif;
-    font-size: 20px;
-    line-height: 1.6;
+  .billede img {
+    max-width: 35%; /* sikre at billedet er responsivt */
+    height: auto; /*  aspect ratio */
   }
-
-  h1 {
-    font-size: 30px;
-    text-align: center;
-    font-family: "Arvo", serif;
-    font-weight: 400;
+  /* Style for the knap image */
+  .knap {
+    position: absolute;
+    margin-left: 10%; /* Position det i bunden */
+    text-align: left;
+    margin-top: -10%;
   }
-
-  h2 {
-    font-family: "Arvo", serif;
-    padding-bottom: 5%;
-    text-align: center;
-    font-weight: 400;
+  
+  .knap img {
+    max-width: 80%; /* responsivt billede */
+    height: auto; /*  aspect ratio */
+    width: 200px; /* juster bredden */
   }
-
+  .nering img {
+    width: 80%; /* Set the width of the image */
+    height: 100%;
+  }
+  .advertiser img {
+    width: 100%; /* Set the width of the image */
+    height: 100%;
+  }
+ /* styling af brødtekst */
+p {
+  font-family: "barlow condensed", serif;
+  font-size: 20px;
+  line-height: 1.6;
+}
+/* h1 styling */
+h1 {
+  font-size: 55px;
+  text-align: center;
+  font-family: "Alex Brush", sans-serif;
+  font-weight: 400;
+}
+/* h2 styling */
+h2 {
+  font-family: "Alex brush", bold;
+  padding-bottom: 5%;
+  text-align: center;
+  font-weight: 400;
+}
   hr {
     border: 0;
     height: 1px;
@@ -476,13 +489,7 @@ body {
     margin: 20px auto;
   }
 
-  .article .read-more {
-    color: #c36b54;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 15px;
-  }
+
 
   /* CSS for når artiklen skal blive synlig */
   .article-visible {

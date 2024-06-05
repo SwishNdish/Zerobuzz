@@ -49,27 +49,29 @@ nav {
   color: #A9C280; /* tekst farve on hover */
 }
 
-.article {
-  display: grid;
-  grid-template-columns: auto 1fr; /* Auto width for billede, resterende plads bruges til tekst */
-  gap: 20px; /* Gap/afstand imellem tekst og billede */
-  align-items: start; /* Align items to the start vertically */
-  padding: 20px;
+.article1 {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.article img {
-  width: 70%; 
-  height: auto; 
+.daase {
+  flex-basis: 30%;
+  margin: 20px;
+}
+
+.daase img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 #artikel2 {
-  text-align: center;
-  width: 400px;
-}
-
-#artikel2 h1, #artikel2 h2, #artikel2 p {
-  margin: 10px;
-  padding: 10px 0;
+  flex-basis: 60%;
+  margin: 20px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #Brus {
@@ -106,7 +108,7 @@ nav {
   background-color: #575757;
 }
 /* artikel smooth transition og farver samt padding og margin for white space */
-.article {
+.article1 {
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
   color: #745A37;
@@ -115,9 +117,9 @@ nav {
   text-align: center;
 }
 /* white space for paragraferne */
-.article h2,
-.article,
-.article p {
+.article1 h2,
+.article1,
+.article1 p {
   margin: 0 0 20px;
 }
 /* styling af brødtekst */
@@ -147,42 +149,7 @@ h3 {
   font-weight: 1;
 }
 
-/* læs mere cirkle */
-.article .read-more {
-  color: #c36b54;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 15px;
-}
 
-/* css for at artiklen bliver synlig */
-.article-visible {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.nering {
-  display: grid;
-  place-items: center;
-  height: 100vh; 
-}
-
-.nering img {
-  width: 1000px; 
-  height: auto; 
-}
-
-.advertiser {
-  display: grid;
-  place-items: center; 
-  height: 100vh; 
-}
-
-.advertiser img {
-  width: 100%; /* Set the width of the image */
-  height: auto; /* Maintain the aspect ratio */
-}
 
 
 
@@ -260,13 +227,26 @@ body {
 
 
 
-@media (min-width: 1260px) {
+@media (max-width: 983px) {
   footer {
     text-align: center;
-    padding: 10px 0;
-    position: relative;
+    padding: 5px 0;
+
     width: 100%;
     margin-top: 11%;
+  }
+  .social-media {
+    display: flex;
+    flex-direction: column; /* Add this line */
+    align-items: center;
+  }
+
+  .social-media a {
+    margin-right: 0; /* Remove this line */
+  }
+
+  .social-media img {
+    width: 80%; /* Adjust the size of the social media icons */
   }
 }
 
@@ -308,27 +288,9 @@ body {
   .logo1 {
     height: 10px;
     width: auto;
-    display: none;
   }
 
-  header .hero-image {
-    width: 100%;
-    height: 100vh;
-    background: url("sti-til-dit-hero-billede.jpg") no-repeat center center;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 0;
-  }
-
-  header .hero-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+  
 
   .logo {
     position: absolute;
@@ -342,7 +304,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #a9c280;
     z-index: 2;
     display: block;
   }
@@ -373,7 +335,7 @@ body {
     top: 45px;
     left: 0;
     width: fixed; /* eller fast bredde */
-    background-color: #333;
+    background-color: #a9c280;
     text-align: left;
     padding: 15px;
   }
@@ -386,45 +348,43 @@ body {
   }
 
   .menu a:hover {
-    background-color: #575757;
+    background-color: #0a3c0f;
   }
 
-  .article {
+  .article1 {
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
-    background-color: #f2f2f2;
-    color: #333;
+    color: #60421a;
     padding: 20px;
-    margin-top: 20px;
-    background-color: #e6dfde;
+    margin-top: 0px;
   }
 
-  .article h2,
-  .article,
-  .article p {
-    margin: 0 0 20px;
+  .article1 h2,
+  .article1,
+  .article1 p {
+    margin: 0px;
   }
-
-  p {
-    font-family: "Arapey", serif;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-
-  h1 {
-    font-size: 30px;
-    text-align: center;
-    font-family: "Arvo", serif;
-    font-weight: 400;
-  }
-
-  h2 {
-    font-family: "Arvo", serif;
-    padding-bottom: 5%;
-    text-align: center;
-    font-weight: 400;
-  }
-
+ 
+ /* styling af brødtekst */
+p {
+  font-family: "barlow condensed", serif;
+  font-size: 20px;
+  line-height: 1.6;
+}
+/* h1 styling */
+h1 {
+  font-size: 55px;
+  text-align: center;
+  font-family: "Alex Brush", sans-serif;
+  font-weight: 400;
+}
+/* h2 styling */
+h2 {
+  font-family: "Alex brush", bold;
+  padding-bottom: 5%;
+  text-align: center;
+  font-weight: 400;
+}
   hr {
     border: 0;
     height: 1px;
@@ -433,36 +393,16 @@ body {
     margin: 20px auto;
   }
 
-  .article .read-more {
-    color: #c36b54;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 15px;
-  }
-
-  /* CSS for når artiklen skal blive synlig */
-  .article-visible {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  .circle {
+  .article1 {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: rgba(255, 99, 71, 0.897);
-    position: absolute;
-    top: 80%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
   }
-
-  .circle-text {
-    color: #ffffff;
-    margin: 0;
+  
+  .daase img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
   }
 }
